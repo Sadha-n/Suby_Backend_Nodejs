@@ -25,10 +25,10 @@ app.use('/firm', firmRoutes)
 app.use('/product', productRoutes);
 app.use('/uploads', express.static('uploads'));
 
-app.listen(PORT, () => {
-    console.log(`server started and running at ${PORT}`);
-});
-
 app.use('/', (req, res) => {
     res.send("<h1> Welcome to ");
 })
+
+app.listen(PORT, () => {
+    console.log(`server started and running at ${PORT}`);
+});
